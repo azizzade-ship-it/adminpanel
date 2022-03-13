@@ -5,22 +5,25 @@ import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
+import { FcHome } from "@react-icons/all-files/fc/FcHome";
+import { FcShop } from "@react-icons/all-files/fc/FcShop";
+import { FaUserAlt } from "@react-icons/all-files/fa/FaUserAlt";
+import { FaUserTie } from "@react-icons/all-files/fa/FaUserTie";
+import { BsBuilding } from "@react-icons/all-files/bs/BsBuilding";
+import { FcEngineering } from "@react-icons/all-files/fc/FcEngineering";
+import { TiPointOfInterest } from "@react-icons/all-files/ti/TiPointOfInterest";
+import { FaAward } from "@react-icons/all-files/fa/FaAward";
+import { FaToolbox } from "@react-icons/all-files/fa/FaToolbox";
+import { RiBuilding2Fill } from "@react-icons/all-files/ri/RiBuilding2Fill";
 
-
-import {
-  LineStyle,
-  Timeline,
-  PermIdentity,
-  Storefront,
-  AttachMoney,
-  BarChart,
-  MailOutline,
-  DynamicFeed,
-  ChatBubbleOutline,
-  WorkOutline,
-  Report,
-} from "@material-ui/icons";
-
+import { FcAdvertising } from "@react-icons/all-files/fc/FcAdvertising";
+import { FcMoneyTransfer } from "@react-icons/all-files/fc/FcMoneyTransfer";
+import { GiReceiveMoney } from "@react-icons/all-files/gi/GiReceiveMoney";
+import { GiModernCity } from "@react-icons/all-files/gi/GiModernCity";
+import { FaCity } from "@react-icons/all-files/fa/FaCity";
+import{FaServicestack}from "@react-icons/all-files/fa/FaServicestack";
+import{BiCommentError}from "@react-icons/all-files/bi/BiCommentError";
+import{FiUsers}from "@react-icons/all-files/fi/FiUsers";
 export const routes = [
   {
     type: "title",
@@ -30,8 +33,8 @@ export const routes = [
     type: "route",
     name: "خانه",
     route: "/home",
-    icon: <LineStyle className="sidebarIcon" />,
-    component: <Home/>
+    icon: <FcHome className="sidebarIcon" />,
+    component: <Home />,
   },
   {
     type: "title",
@@ -41,50 +44,50 @@ export const routes = [
     type: "route",
     name: " کاربران عادی",
     route: "/normal-users/",
-    icon: <PermIdentity className="sidebarIcon" />,
-    component:<User/>
+    icon: <FaUserAlt className="sidebarIcon" />,
+    component: <User />,
   },
   {
     type: "route",
     name: "فروشندگان",
     route: "/sellers/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FcShop className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "تامین کنندگان خدمات ساختمانی",
     route: "/sakht-saz/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <BsBuilding className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "تامین کنندگان فنی مهندسی",
     route: "/fanni-mohandesi/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FcEngineering className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "مشاورین املاک",
     route: "/realestates/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FaUserTie className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "امتیازات کاربران",
     route: "/userScore/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <TiPointOfInterest className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "درخواست طرح جایزه",
     route: "/userScoreRequest/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FaAward className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "title",
@@ -94,8 +97,8 @@ export const routes = [
     type: "route",
     name: "محصولات",
     route: "/product-list/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FaToolbox className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "title",
@@ -105,8 +108,8 @@ export const routes = [
     type: "route",
     name: "مدیریت املاک",
     route: "/estates/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <RiBuilding2Fill className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "title",
@@ -117,15 +120,15 @@ export const routes = [
     type: "route",
     name: "انواع تبلیغات",
     route: "/adv-type/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FcAdvertising className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "لیست تبلیغات",
     route: "/advs/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FcAdvertising className="sidebarIcon" />,
+    component: <ProductList />,
   },
 
   {
@@ -136,15 +139,15 @@ export const routes = [
     type: "route",
     name: "تراکنش های مالی",
     route: "/transactions/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FcMoneyTransfer className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "تسویه حساب کاربر",
     route: "/tasvie/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <GiReceiveMoney className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "title",
@@ -154,36 +157,36 @@ export const routes = [
     type: "route",
     name: "استان و شهر",
     route: "/city-province/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <GiModernCity className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "اطلاعات پایه ملک",
     route: "/estate/group",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FaCity className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "دسته بندی خدمات",
     route: "/category/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FaServicestack className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "گزارش مشکل اگهی",
     route: "/ad-problem-reports/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <BiCommentError className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "کاربران پنل",
     route: "/adminUsers/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FiUsers className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "title",
@@ -193,35 +196,35 @@ export const routes = [
     type: "route",
     name: "استان و شهر",
     route: "/city-province/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FcHome className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "اطلاعات پایه ملک",
     route: "/estate/group",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FaCity className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "دسته بندی خدمات",
     route: "/category/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FcHome className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "گزارش مشکل اگهی",
     route: "/ad-problem-reports/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FcHome className="sidebarIcon" />,
+    component: <ProductList />,
   },
   {
     type: "route",
     name: "کاربران پنل",
     route: "/adminUsers/",
-    icon: <Storefront className="sidebarIcon" />,
-    component:<ProductList/>
+    icon: <FcHome className="sidebarIcon" />,
+    component: <ProductList />,
   },
 ];

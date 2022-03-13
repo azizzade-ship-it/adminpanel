@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "/https://api.hamrahamlak.ir/api";
+const BASE_URL = "https://api.hamrahamlak.ir/api";
 
 const signup = (
   mobile,
@@ -12,7 +12,7 @@ const signup = (
   referralCode
 ) => {
   return axios
-    .post(BASE_URL + "/Auth/RegisterationUser", {
+    .post(BASE_URL + "/Auth/AdminLogin", {
       mobile,
       nameFamily,
       cityId,
@@ -30,21 +30,26 @@ const signup = (
     });
 };
 
-const login = (mobile, verifyCode, notificationToken, clientType) => {
+const login = (userName, password,googleReCaptchaResponse) => {
   return axios
     .post(BASE_URL + "/login", {
-      mobile,
-      verifyCode,
-      notificationToken,
-      clientType,
+      googleReCaptchaResponse,
+      userName,
+      password,
     })
     .then((response) => {
       if (response.data.accessToken) {
         localStorage.setItem("user_hamrah", JSON.stringify(response.data));
       }
-
+      console.log("res",response)
       return response.data;
     });
+};
+
+const getData = (url) => {
+  return axios.get(BASE_URL + url).then((response) => {
+    return response.data;
+  });
 };
 
 const logout = () => {

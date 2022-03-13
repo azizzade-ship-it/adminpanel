@@ -16,8 +16,8 @@ export default function Slidbar({ getRoot }) {
                 return (
                   <Link to={menu.route} className="link">
                     <li className={`sidebarListItem ${(menu.route === pathname?"sidebar-active":"")}`}>
-                      {menu.icon}
-                      {menu.name}
+                      <span>{menu.icon}</span>
+                      <p>{menu.name}</p>
                     </li>
                   </Link>
                 );

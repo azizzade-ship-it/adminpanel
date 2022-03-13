@@ -6,7 +6,7 @@ import Avatar from "@material-ui/core/Avatar";
 
 
 export default function User() {
-  const { isLoading, error, data } = useQuery("user", () =>
+  /*const { isLoading, error, data } = useQuery("user", () =>
     axios("https://api.hamrahamlak.ir/api/User/GetRealStateUsers")
   );
   if (isLoading)
@@ -14,8 +14,9 @@ export default function User() {
       <div>
         <h3>Loading...</h3>
       </div>
-    );
-  console.log("data",data);
+    );*/
+ // console.log("data",data);
+ 
   return (
       <div className="users">
         {/*data.data.map((val) => (
